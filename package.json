@@ -1,0 +1,19 @@
+{
+  "name": "12-education-website-(bootstrap-sample)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "sass:build": "sass --no-source-map scss:style",
+    "sass:watch": "sass --no-source-map --watch scss:style"
+  },
+  "keywords": [],
+  "author": "Moein Ghiasvand",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6",
+    "bootstrap": "^5.3.3",
+    "sass": "^1.77.6",
+    "swiper": "^11.1.4"
+  }
+}

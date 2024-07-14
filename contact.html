@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Learniverse</title>
+    <!-- Bootstrap css file -->
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <!-- css file of project -->
+    <link rel="stylesheet" href="style/style.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./img/purple-logo.webp">
+    <!-- css file of AOS library -->
+    <link href="style/aos.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+    
+    <div class="spinner__container d-flex justify-content-center align-items-center bg-dark" style="width: 100vw; height: 100vh;">
+        <span class="spinner-grow text-purple" style="width: 50px; height: 50px;">
+            <span class="visually-hidden">Loading...</span>
+        </span>
+    </div>
+
+    <div class="website__content visually-hidden">
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow border-bottom border-secondary fixed-top custom__navbar">
+        <div class="container">
+            <a href="contact.html" class="navbar-brand py-0">
+                <img src="img/white-logo.webp" alt="" width="90">
+            </a>
+
+            <button class="navbar-toggler border-0"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarContent"
+                aria-expanded="false"
+                aria-controls="navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse"
+                id="navbarContent">
+
+                <ul class="navbar-nav ms-auto my-3 my-lg-0 gap-lg-3">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="courses.html" class="nav-link">Courses</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link active text-lightPurple" aria-current="true">Contact</a>
+                    </li>
+                </ul>
+
+            
+                <div class="d-grid ms-auto me-0 me-lg-2 mb-2 mb-lg-0">
+                    <button class="btn btn-purple d-flex align-items-center justify-content-center gap-2"
+                        data-bs-toggle="modal"
+                        data-bs-target="#loginformModal">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"/>
+                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
+                        </svg>
+                        Login
+                    </button>
+                </div>
+                <form role="search" class="mb-2 mb-md-0">
+                    <div class="input-group">
+                        <input type="search" name="" id="" class="form-control" placeholder="search...">
+                        <button class="btn btn-success d-flex justify-content-center align-items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+                <div class="dropdown ms-lg-2 d-inline-flex text-bg-purple rounded-2">
+                    <button class="btn dropdown-toggle d-flex align-items-center py-2 border border-3 border-purple" id="bd-theme" type="button" aria-expanded="true" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill" viewBox="0 0 16 16">
+                            <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
+                        </svg>
+
+                        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+                            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"></path>
+                        </svg>
+
+                        <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                        <li>
+                          <button type="button" id="dropdown__light-item" class="dark__mode-item dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill me-2" viewBox="0 0 16 16">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"/>
+                            </svg>
+                            Light
+                            <svg id="sun__icon-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 ms-auto d-none" viewBox="0 0 16 16">
+                                <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                          </button>
+                        </li>
+
+                        <li>
+                            <button id="dropdown__dark-item" type="button" id="dropdown__dark-item" class="dark__mode-item dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill me-2" viewBox="0 0 16 16">
+                                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"/>
+                                </svg>
+                                Dark
+                                <svg id="moon__icon-check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 ms-auto d-none" viewBox="0 0 16 16">
+                                    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0"/>
+                                </svg>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start header section -->
+    <header class="header__contact-page py-5 my-5 shadow">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-easing="ease-out" data-aos-duration="1000">
+                    <nav aria-label="breadcrumb" class="pt-5 mt-5 mb-2">
+                        <ul class="breadcrumb border border-2 d-inline-flex px-4 py-1 rounded-pill fs-5 shadow" style="--bs-breadcrumb-divider:'&rang;'">
+                            <li class="breadcrumb-item">
+                                <a href="#" class="text-decoration-none ">Home</a>
+                            </li>
+                            <li class="breadcrumb-item active">
+                                Contact Us
+                            </li>
+                        </ul>
+                    </nav>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non temporibus itaque ab! Aut quam similique itaque sequi ducimus, blanditiis fugit. Amet ducimus, ex dolor praesentium eos vero laudantium atque similique?
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center text-lg-end" data-aos="fade-left" data-aos-easing="ease-out" data-aos-duration="1000">
+                    <img class="img-fluid" src="img/contact-page-img.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End header section -->
+
+    <main>
+        <!-- Start contact us section -->
+        <section class="contact__us-section my-5 py-5">
+            <div class="container">
+                <h3 class="section__title text-center mt-5 position-relative pb-3" data-aos="fade-up" data-aos-easing="ease-out" data-aos-offset="240" data-aos-duration="1000">
+                    Contact Us
+                    <span class="position-absolute bottom-0 start-50 translate-middle-x" style="height: 2px; max-width: 150px; width: 100%;">
+                        <span class="px-4 py-1 rounded-pill position-absolute top-100 start-50 translate-middle"></span>
+                    </span>   
+                </h3>
+                <div class="contact__us rounded-4" data-aos="zoom-in" data-aos-easing="ease-out" data-aos-offset="150" data-aos-duration="1000">
+                    <div class="row my-5 gx-4 gx-lg-0 align-items-center">
+                        <div class="col-lg-4">
+                            <div class="contact__us-content small d-flex flex-column align-items-start px-4 px-xl-5 py-3 ">
+                                <div class="contact__us-conver">
+                                    <img class="img-fluid object-fit-cover" src="img/contact.svg" alt="">
+                                </div>
+                                <h3 class="mb-3">Contact Us</h3>
+                                <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et repudiandae nam velit odit voluptatem sequi?</p>
+                                <div class="form__content-contact__ways vstack">
+                                    <p class="d-inline-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                                        </svg>
+                                        +233 5879 256
+                                    </p>
+                                    <p class="d-inline-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                            <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/>
+                                        </svg>
+                                        learniverse@gamil.com
+                                    </p>
+                                    <p class="d-inline-flex align-items-center gap-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+                                        </svg>
+                                        1234 main St, Eastern Alley, Munich, Germany
+                                    </p>
+                                </div>
+                                <div class="social__medai">
+                                    <!-- Twitter -->
+                                    <div class="social-icon twitter-icon">
+                                        <div class="social-icon-bloom"></div>
+                                        <div class="social-icon-sparkle">
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        </div>
+                                        <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Facebook -->
+                                    <div class="social-icon facebook-icon">
+                                        <div class="social-icon-bloom"></div>
+                                        <div class="social-icon-sparkle">
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        </div>
+                                        <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></path>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Instagram -->
+                                    <div class="social-icon instagram-icon">
+                                        <div class="social-icon-bloom"></div>
+                                        <div class="social-icon-sparkle">
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        </div>
+                                        <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                        </svg>
+                                    </div>
+                                    
+                                    <!-- Snapchat -->
+                                    <div class="social-icon snapchat-icon">
+                                        <div class="social-icon-bloom"></div>
+                                        <div class="social-icon-sparkle">
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        <div class="social-icon-sparkle-line"></div>
+                                        </div>
+                                        <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path d="M510.846 392.673c-5.211 12.157-27.239 21.089-67.36 27.318-2.064 2.786-3.775 14.686-6.507 23.956-1.625 5.566-5.623 8.869-12.128 8.869l-.297-.005c-9.395 0-19.203-4.323-38.852-4.323-26.521 0-35.662 6.043-56.254 20.588-21.832 15.438-42.771 28.764-74.027 27.399-31.646 2.334-58.025-16.908-72.871-27.404-20.714-14.643-29.828-20.582-56.241-20.582-18.864 0-30.736 4.72-38.852 4.72-8.073 0-11.213-4.922-12.422-9.04-2.703-9.189-4.404-21.263-6.523-24.13-20.679-3.209-67.31-11.344-68.498-32.15a10.627 10.627 0 0 1 8.877-11.069c69.583-11.455 100.924-82.901 102.227-85.934.074-.176.155-.344.237-.515 3.713-7.537 4.544-13.849 2.463-18.753-5.05-11.896-26.872-16.164-36.053-19.796-23.715-9.366-27.015-20.128-25.612-27.504 2.437-12.836 21.725-20.735 33.002-15.453 8.919 4.181 16.843 6.297 23.547 6.297 5.022 0 8.212-1.204 9.96-2.171-2.043-35.936-7.101-87.29 5.687-115.969C158.122 21.304 229.705 15.42 250.826 15.42c.944 0 9.141-.089 10.11-.089 52.148 0 102.254 26.78 126.723 81.643 12.777 28.65 7.749 79.792 5.695 116.009 1.582.872 4.357 1.942 8.599 2.139 6.397-.286 13.815-2.389 22.069-6.257 6.085-2.846 14.406-2.461 20.48.058l.029.01c9.476 3.385 15.439 10.215 15.589 17.87.184 9.747-8.522 18.165-25.878 25.018-2.118.835-4.694 1.655-7.434 2.525-9.797 3.106-24.6 7.805-28.616 17.271-2.079 4.904-1.256 11.211 2.46 18.748.087.168.166.342.239.515 1.301 3.03 32.615 74.46 102.23 85.934 6.427 1.058 11.163 7.877 7.725 15.859z"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="contact__us-form px-3 px-lg-5 py-5 py-lg-0">
+                                <form >
+                                    <div class="row g-2 g-sm-3 g-lg-4">
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" name="" id="u-Fname" class="form-control" placeholder="Firstname">
+                                                <label for="u-Fname">Firstname</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-floating">
+                                                <input type="text" name="" id="u-Lname" class="form-control" placeholder="Lastname">
+                                                <label for="u-Lname">Lastname</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <input type="text" name="" id="u-Email" class="form-control" placeholder="Your Email address">
+                                                <label for="u-Email">Your Email address</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-floating">
+                                                <textarea name="" id="u-Message" cols="10" rows="10" class="form-control" placeholder="Your message"></textarea>
+                                                <label for="u-Message">Your message</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button class="btn btn-danger" type="submit">
+                                                Send message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End contact us section -->
+
+        <!-- Start join us section -->
+        <section class="join__us-sect mb-5 pb-5">
+            <h3 class="section__title text-center mt-5 position-relative pb-3" data-aos="fade-up" data-aos-easing="ease-out">
+                You can join Us if:
+                <span class="position-absolute bottom-0 start-50 translate-middle-x" style="height: 2px; max-width: 250px; width: 100%;">
+                    <span class="px-4 py-1 rounded-pill position-absolute top-100 start-50 translate-middle"></span>
+                </span>   
+            </h3>
+            <div class="container">
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8">
+                        <div class="join__us p-3 rounded-3 text-white" style="background-color: #2e3267;" data-bs-theme="dark">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <div class="list-group" id="myScrollspy" style="--bs-list-group-bg:#6c63ff;--bs-list-group-action-hover-bg:#5b54d5">
+                                        <a href="#itemOne" class="list-group-item list-group-item-action">Mastery of the skill</a>
+                                        <a href="#itemTwo" class="list-group-item list-group-item-action">Effective communication</a>
+                                        <a href="#itemThree" class="list-group-item list-group-item-action">Creativity and innovation</a>
+                                        <a href="#itemFour" class="list-group-item list-group-item-action">Commitment and sustainability</a>
+                                        <a href="#itemFive" class="list-group-item list-group-item-action">Flexiblity</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 scrollspy-example p-3 overflow-y-auto"
+                                    id="scrollspy-example-content" 
+                                    style="height:200px;"
+                                    data-bs-spy="scroll"
+                                    data-bs-target="#myScroll"
+                                    data-bs-smooth-scroll="true">
+    
+                                    <h4 class="text-lightPurple" id="itemOne">-Mastery of skill:</h4>
+                                    <p>
+                                        In Learniverse, we are looking for individuals who are talented and proficient in a specific field to collaborate with us. If you are someone who has expertise in a particular area and is willing to share your knowledge and experiences, we are eager to hear your ideas and suggestions. Help us improve and expand our products and services with your dedication and commitment, and find your place in our community. As an active and effective member, we can work together to achieve our common goals. We look forward to having you on our team!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto molestiae atque ad similique suscipit saepe, enim eveniet esse omnis fugit id repellendus harum explicabo quisquam iure veritatis laborum sequi labore!    
+                                    </p>
+    
+                                    <h4 class="text-lightPurple" id="itemTwo">-Effective communication:</h4>
+                                    <p>
+                                        We are seeking individuals with exceptional interpersonal skills to collaborate with us. If you possess the ability to effectively communicate and connect with others, we invite you to join our team. Your talent in building relationships and fostering connections will be invaluable as we work together towards our shared goals. Together, we can create a positive and impactful community. Join us in making a difference!
+                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione soluta inventore dolorem nulla optio, itaque voluptates exercitationem, nesciunt illo sequi asperiores earum molestiae atque quod. Doloremque tenetur accusantium architecto id.
+                                    </p>
+    
+                                    <h4 class="text-lightPurple" id="itemThree">-Creativity and innovation:</h4>
+                                    <p>
+                                        Are you a creative and innovative individual looking to make a difference? We are seeking talented individuals with a passion for thinking outside the box and coming up with fresh ideas to join our team. If you thrive on creativity and have a knack for innovation, we invite you to collaborate with us. Your unique perspective and inventive approach will be instrumental in helping us achieve our goals. Join us in shaping the future and making a positive impact together!
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis perspiciatis veniam et? Dolore nam beatae officia optio recusandae adipisci odio. Aliquam obcaecati vitae explicabo mollitia quasi cum earum dolore hic!
+                                    </p>
+    
+                                    <h4 class="text-lightPurple" id="itemFour">-Commitment and sustainability:</h4>
+                                    <p>
+                                        Are you a committed and reliable individual looking to make a difference? We are seeking talented individuals with a strong sense of dedication to join our team. If you have a proven track record of reliability and commitment, we invite you to collaborate with us. Your steadfastness and perseverance will be invaluable in helping us achieve our goals. Join us in shaping the future and making a positive impact together!
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nemo accusantium nihil dicta omnis consequuntur facere cum, id quae perferendis hic quod maxime, adipisci ipsa culpa animi quidem. Ea, modi?
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea minus aut commodi incidunt voluptas, corrupti eos eum sapiente, temporibus vitae exercitationem. Eos nesciunt debitis voluptatum, porro est omnis veritatis?
+                                    </p>
+    
+                                    <h4 class="text-lightPurple" id="itemFive">-Flexiblity:</h4>
+                                    <p>
+                                        Are you a committed and reliable individual looking to make a difference? We are seeking talented individuals with a strong sense of dedication to join our team. If you have a proven track record of reliability and commitment, we invite you to collaborate with us. Your steadfastness and perseverance will be invaluable in helping us achieve our goals. Join us in shaping the future and making a positive impact together!
+                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima nemo accusantium nihil dicta omnis consequuntur facere cum, id quae perferendis hic quod maxime, adipisci ipsa culpa animi quidem. Ea, modi?
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ea minus aut commodi incidunt voluptas, corrupti eos eum sapiente, temporibus vitae exercitationem. Eos nesciunt debitis voluptatum, porro est omnis veritatis?
+                                    </p>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End join us section -->
+    </main>
+
+    <!-- Start footer section -->
+    <footer class="p-5">
+        <section class="footer-sect text-white">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="footer__logo-solgan pe-4">
+                            <div class="footer__logo d-inline-flex align-items-end gap-2">
+                                <img class="img-fluid" src="img/white-logo.webp" alt="" width="90">
+                                <h5 class="fw-light opacity-75">Learniverse</h5>
+                            </div>
+                            <h4 class="solgan mt-2 opacity-75">Learn fast, whit us.</h4>
+                            <p class="small opacity-50">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam eaque maxime quam itaque sunt voluptatem inventore!
+                            </p>    
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="permalinks__footer">
+                            <h4 class="footer__col-title mb-4">Permalinks</h4>
+                            <ul class="list-unstyled nav flex-column align-items-start">
+                                <li class="nav-item">
+                                    <a href="index.html" class="ps-0 nav-link link-secondary">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="about.html" class="ps-0 nav-link link-secondary">About</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="courses.html" class="ps-0 nav-link link-secondary">Courses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="ps-0 nav-link link-secondary link-light active" aria-current="page">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <div class="primacy__footer">
+                            <h4 class="footer__col-title mb-4">Primacy</h4>
+                            <ul class="nav flex-column align-items-start">
+                                <li class="nav-item">
+                                    <a href="#" class="ps-0 nav-link link-secondary">Privacy & Policy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="ps-0 nav-link link-secondary">Terms & Conditions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="ps-0 nav-link link-secondary">Refund Policy</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <h4 class="footer__col-title mb-4">Contact ways</h4>
+
+                        <span class="d-inline-flex align-items-center gap-2 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+                            </svg>
+                            +01 234 567 8910
+                        </span>
+                        <span class="d-inline-flex align-items-center gap-2 mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-at-fill" viewBox="0 0 16 16">
+                                <path d="M2 2A2 2 0 0 0 .05 3.555L8 8.414l7.95-4.859A2 2 0 0 0 14 2zm-2 9.8V4.698l5.803 3.546zm6.761-2.97-6.57 4.026A2 2 0 0 0 2 14h6.256A4.5 4.5 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586zM16 9.671V4.697l-5.803 3.546.338.208A4.5 4.5 0 0 1 12.5 8c1.414 0 2.675.652 3.5 1.671"/>
+                                <path d="M15.834 12.244c0 1.168-.577 2.025-1.587 2.025-.503 0-1.002-.228-1.12-.648h-.043c-.118.416-.543.643-1.015.643-.77 0-1.259-.542-1.259-1.434v-.529c0-.844.481-1.4 1.26-1.4.585 0 .87.333.953.63h.03v-.568h.905v2.19c0 .272.18.42.411.42.315 0 .639-.415.639-1.39v-.118c0-1.277-.95-2.326-2.484-2.326h-.04c-1.582 0-2.64 1.067-2.64 2.724v.157c0 1.867 1.237 2.654 2.57 2.654h.045c.507 0 .935-.07 1.18-.18v.731c-.219.1-.643.175-1.237.175h-.044C10.438 16 9 14.82 9 12.646v-.214C9 10.36 10.421 9 12.485 9h.035c2.12 0 3.314 1.43 3.314 3.034zm-4.04.21v.227c0 .586.227.8.581.8.31 0 .564-.17.564-.743v-.367c0-.516-.275-.708-.572-.708-.346 0-.573.245-.573.791"/>
+                            </svg>
+                            learniverse@gamil.com          
+                        </span>
+                        <div class="social__medai">
+                            <!-- Twitter -->
+                            <div class="social-icon twitter-icon">
+                                <div class="social-icon-bloom"></div>
+                                <div class="social-icon-sparkle">
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                </div>
+                                <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                                </svg>
+                            </div>
+                            
+                            <!-- Facebook -->
+                            <div class="social-icon facebook-icon">
+                                <div class="social-icon-bloom"></div>
+                                <div class="social-icon-sparkle">
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                </div>
+                                <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></path>
+                                </svg>
+                            </div>
+                            
+                            <!-- Instagram -->
+                            <div class="social-icon instagram-icon">
+                                <div class="social-icon-bloom"></div>
+                                <div class="social-icon-sparkle">
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                </div>
+                                <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                                </svg>
+                            </div>
+                            
+                            <!-- Snapchat -->
+                            <div class="social-icon snapchat-icon">
+                                <div class="social-icon-bloom"></div>
+                                <div class="social-icon-sparkle">
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                <div class="social-icon-sparkle-line"></div>
+                                </div>
+                                <svg class="social-icon-shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                <path d="M510.846 392.673c-5.211 12.157-27.239 21.089-67.36 27.318-2.064 2.786-3.775 14.686-6.507 23.956-1.625 5.566-5.623 8.869-12.128 8.869l-.297-.005c-9.395 0-19.203-4.323-38.852-4.323-26.521 0-35.662 6.043-56.254 20.588-21.832 15.438-42.771 28.764-74.027 27.399-31.646 2.334-58.025-16.908-72.871-27.404-20.714-14.643-29.828-20.582-56.241-20.582-18.864 0-30.736 4.72-38.852 4.72-8.073 0-11.213-4.922-12.422-9.04-2.703-9.189-4.404-21.263-6.523-24.13-20.679-3.209-67.31-11.344-68.498-32.15a10.627 10.627 0 0 1 8.877-11.069c69.583-11.455 100.924-82.901 102.227-85.934.074-.176.155-.344.237-.515 3.713-7.537 4.544-13.849 2.463-18.753-5.05-11.896-26.872-16.164-36.053-19.796-23.715-9.366-27.015-20.128-25.612-27.504 2.437-12.836 21.725-20.735 33.002-15.453 8.919 4.181 16.843 6.297 23.547 6.297 5.022 0 8.212-1.204 9.96-2.171-2.043-35.936-7.101-87.29 5.687-115.969C158.122 21.304 229.705 15.42 250.826 15.42c.944 0 9.141-.089 10.11-.089 52.148 0 102.254 26.78 126.723 81.643 12.777 28.65 7.749 79.792 5.695 116.009 1.582.872 4.357 1.942 8.599 2.139 6.397-.286 13.815-2.389 22.069-6.257 6.085-2.846 14.406-2.461 20.48.058l.029.01c9.476 3.385 15.439 10.215 15.589 17.87.184 9.747-8.522 18.165-25.878 25.018-2.118.835-4.694 1.655-7.434 2.525-9.797 3.106-24.6 7.805-28.616 17.271-2.079 4.904-1.256 11.211 2.46 18.748.087.168.166.342.239.515 1.301 3.03 32.615 74.46 102.23 85.934 6.427 1.058 11.163 7.877 7.725 15.859z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- End footer section -->
+    
+    <!-- Start Copyrihgt section -->
+    <section class="copyright__sect p-3 border-top bg-gradient text-white text-opacity-75">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-light text-center text-md-start">
+                        Website developer: <a href="#" 
+                            class="link-info link-offset-2 link-underline-opacity-0 link-underline-opacity-75-hover"
+                            data-bs-toggle="tooltip"
+                            title="View my resume and smaples">
+                            Moein Ghiasvand
+                        </a>
+                    </h5>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="fw-light text-center text-md-end">Copyrihgt &copy; All right's reserved</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Copyrihgt section -->
+
+    <!-- Start Login form modal -->
+    <div class="modal fade"
+        id="loginformModal"
+        tabindex="-1"
+        style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden bg-darkPurple text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Login form</h5>
+                    <button class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" name="" id="" class="form-control border-2 " placeholder="Username" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" name="" id="" class="form-control border-2 " placeholder="Password" required>
+                            </div>
+                            <div class="col-12 text-center">
+                                <a href="#" class="link-info link-offset-1 link-underline-opacity-25 link-underline-opacity-75-hover">Forgot your password?</a>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn btn-lightPurple text-white d-inline-flex align-items-center justify-content-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"></path>
+                                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+                                        </svg>
+                                        Login
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <span>
+                                    Don't have an account?
+                                    <a href="#" class="link-info link-offset-1 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#signupModal">Signup</a>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <!-- End Login form modal -->
+    
+    <!-- Start Signup modal-->
+    <div class="modal fade"
+        id="signupModal"
+        tabindex="-1"
+        style="backdrop-filter: blur(5px);">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content overflow-hidden bg-darkPurple text-white">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sign Up form</h5>
+                    <button class="btn-close btn-close-white"
+                        data-bs-dismiss="modal">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <input type="text" name="" id="" class="form-control border-2" placeholder="Username" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" name="" id="" class="form-control border-2" placeholder="Create password" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="password" name="" id="" class="form-control border-2" placeholder="Confirm password" required>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <label for="u-Remember" class="form-check-label user-select-none">Remember me</label>
+                                    <input type="checkbox" name="" id="u-Remember" class="form-check-input">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button class="btn btn-lightPurple text-white d-inline-flex align-items-center justify-content-center gap-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0z"></path>
+                                            <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+                                        </svg>
+                                        Signup
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <span>
+                                    Already have an account?
+                                    <a href="#" class="link-info link-offset-1 link-underline-opacity-25 link-underline-opacity-75-hover"
+                                        data-bs-toggle="modal"
+                                        data-bs-target="#loginformModal">
+                                        Login
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Signup modal-->
+    </div>
+    
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/enable-stuff.js"></script>
+    <script src="js/popper.min.js"></script> 
+
+    <!-- js file of AOS library -->
+    <script src="js/aos.js"></script>
+
+    <!-- js file of project -->
+    <script src="js/script.js"></script>
+</body>
+</html>

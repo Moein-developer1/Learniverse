@@ -1,0 +1,25 @@
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+
+// customize color
+$custom-theme-colors:(
+    "darkPurple": #2e3267,
+    "darkishPurple": #424890,
+    "purple": #5b54d5,
+    "lightPurple": #8780ff,
+    "lightishPurple": #a385ff,
+);
+
+$theme-colors : map-merge($custom-theme-colors, $theme-colors);
+
+// Navbar
+$navbar-dark-color:#fff;
+$navbar-dark-hover-color:var(--bs-lightPurple);
+
+$enable-negative-margins: true;
+
+// navlink color
+$nav-link-color:var(--bs-info);
+$nav-link-hover-color:#00a6c7;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
