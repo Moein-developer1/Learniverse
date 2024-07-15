@@ -128,33 +128,6 @@ header{
         
 } 
 
-// .person__socials{
-//   a{
-//     &:hover{
-//       transform: scale(1.2);
-//     }
-//   }
-// } 
-  
-
-// .person__socials a:hover{
-//   transform: scale(1.2);
-// }
-  
-// .person__socials a:nth-child(1):hover{
-//   color: #cd486b !important;
-// }
-  
-// .person__socials a:nth-child(2):hover{
-//   color: #2cc5ef !important;
-// }
-  
-// .person__socials a:nth-child(3):hover{
-//   color: #2c7aef !important;
-// }
-  
-  
-  
 .person__img{
   filter: grayscale(80%);
   transition: all .5s;
@@ -582,3 +555,9 @@ footer{
   background:linear-gradient(to bottom , #8780ff ,#5b54d5);
   outline: 1px solid slategrey;
 }    
+
+@media screen and (max-width:576px) {
+  .navbar .navbar-brand img {
+    width: 70px !important;
+  }
+}
